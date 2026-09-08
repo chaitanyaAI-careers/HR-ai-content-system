@@ -188,14 +188,24 @@ This keeps the retrieval and governance pipeline directly inspectable through a 
 
 ## Governance Model
 
-```mermaid
-flowchart LR
-    A["Retrieved Results"] --> B{"Role"}
-    B -->|"employee"| C["PII / Sensitive-Term Redaction"]
-    B -->|"hr"| D["Current Result Text"]
-    C --> E["Governed Result"]
-    D --> E
-    E --> F["Grounded Answer"]
+```text
+Retrieved Results
+       |
+       v
+   Role Context
+     /     \
+employee    hr
+   |         |
+   v         v
+PII / Sensitive-    Current
+Term Redaction      Result Text
+     \             /
+      \           /
+       v         v
+      Governed Result
+            |
+            v
+      Grounded Answer
 ```
 
 The current design demonstrates governance **after retrieval**.
