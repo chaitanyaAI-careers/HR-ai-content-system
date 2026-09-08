@@ -416,7 +416,7 @@ The current repository demonstrates:
 - section / length-based chunking
 - metadata enrichment
 - SentenceTransformer embeddings
-- NumPy-backed semantic retrieval
+- scikit-learn cosine-similarity semantic retrieval
 - cosine-similarity ranking
 - deterministic PII / sensitive-term redaction
 - role-conditioned result transformation
