@@ -25,7 +25,7 @@ def redact_pii(text):
     return text
 
 
-def apply_rbac(results, role="employee"):
+def apply_role_governance(results, role="employee"):
     filtered = []
 
     for result in results:

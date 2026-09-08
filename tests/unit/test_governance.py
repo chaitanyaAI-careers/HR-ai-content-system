@@ -1,4 +1,4 @@
-from pipeline.governance import apply_rbac, redact_pii
+from pipeline.governance import apply_role_governance, redact_pii
 
 
 def test_redact_pii_removes_ssn_pattern():
@@ -28,7 +28,7 @@ def test_employee_role_receives_redacted_results():
         }
     ]
 
-    filtered = apply_rbac(results, role="employee")
+    filtered = apply_role_governance(results, role="employee")
 
     assert "123-45-6789" not in filtered[0]["text"]
     assert "salary" not in filtered[0]["text"].lower()
@@ -43,6 +43,6 @@ def test_hr_role_preserves_original_result_text():
         }
     ]
 
-    filtered = apply_rbac(results, role="hr")
+    filtered = apply_role_governance(results, role="hr")
 
     assert filtered[0]["text"] == results[0]["text"]

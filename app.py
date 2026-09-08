@@ -5,7 +5,7 @@ from pipeline.chunking import chunk_text
 from pipeline.metadata import add_metadata
 from pipeline.embeddings import generate_embeddings, model
 from pipeline.retrieval import build_index, search_index
-from pipeline.governance import apply_rbac
+from pipeline.governance import apply_role_governance
 from pipeline.evaluation import evaluate_system
 
 
@@ -31,7 +31,7 @@ def retrieve_results(query, role="employee"):
             "metadata": enriched[idx]["metadata"]
         })
 
-    results = apply_rbac(results, role=role)
+    results = apply_role_governance(results, role=role)
     return results
 
 
