@@ -1,3 +1,5 @@
+![Project header](docs/branding/readme-header.png)
+
 # HR AI Content System
 
 ### Governed Enterprise Retrieval · PII Protection · Semantic Search · Evaluation
