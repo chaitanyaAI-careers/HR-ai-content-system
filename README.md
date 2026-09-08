@@ -54,6 +54,10 @@ The current implementation is intentionally small and inspectable: retrieval, go
 
 ---
 
+![HR AI Content System evidence-aware architecture](docs/architecture/hr-ai-content-system-architecture.png)
+
+---
+
 ## Implemented Capabilities
 
 ### Document Ingestion
