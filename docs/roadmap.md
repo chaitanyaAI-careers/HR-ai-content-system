@@ -155,12 +155,15 @@ Evidence-based retrieval improvements rather than feature additions without benc
 
 Improve engineering maturity around the research system.
 
+Already implemented:
+
+* GitHub Actions CI
+* automated unit and integration test execution
+
 Planned work:
 
 * Docker
 * reproducible local environment
-* GitHub Actions CI
-* automated test execution
 * benchmark execution in CI
 * structured evaluation output
 * configuration validation
